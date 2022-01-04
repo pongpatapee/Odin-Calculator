@@ -8,12 +8,28 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #cfcfcf;
+    background: #073b4c;
     display: flex;
     flex-direction:  column;
     align-items: center;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 30px;
+    font-size: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #0050a5; */
+    font-size: 20px;
+    height: 100px;
+    width: 100%;
+    /* padding: 40px; */
 }
 
 .container {
@@ -24,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background:#5e5e5e;
+    background:#118ab2;
 }
 
 .display {
@@ -44,13 +60,14 @@ body {
 button {
     flex: 1 1 auto;
     height: 50px;
+    width: 60px;
     cursor: pointer;
     margin: 5px;
     background: none;
     border: 3px black solid;
     border-radius: 10px;
     font-size: 24px;
-    background: #ececec;
+    background: #06d6a0;
 }
 
 
@@ -60,4 +77,12 @@ button:hover {
 
 button:active {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+}
+
+#delete {
+    background: #ef476f;
+}
+
+#clear {
+    background: #ffd166;
 }

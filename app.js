@@ -14,9 +14,14 @@ function updateDisplayVal(val){
 const displayValue = document.getElementById('curr-val');
 
 //buttons
-let numBtns = document.querySelectorAll('.num-btns');
-let clearBtn = document.getElementById('clear');
-let deleteBtn = document.getElementById('delete');
+const numBtns = document.querySelectorAll('.num-btns');
+const clearBtn = document.getElementById('clear');
+const deleteBtn = document.getElementById('delete');
+const addBtn = document.getElementById('add');
+const subBtn = document.getElementById('sub');
+const mulBtn = document.getElementById('mul');
+const divBtn = document.getElementById('div');
+
 
 let value1 = '0';
 let vlaue2 = '0';
@@ -42,3 +47,4 @@ deleteBtn.onclick = (e)=>{
     value1 = value1.slice(0, value1.length - 1);
     updateDisplayVal(value1);
 }
+
