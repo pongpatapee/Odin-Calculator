@@ -86,3 +86,11 @@ button:active {
 #clear {
     background: #ffd166;
 }
+
+#delete:hover, #clear:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
+#delete:active, #clear:active {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+}
