@@ -9,9 +9,40 @@ function operate(a, b, func){
 
 function updateDisplayVal(val){
     displayValue.innerText = val;
+    parseHistory(stack);
+}
+
+function parseHistory(stack) {
+    let op;
+    switch(operation){
+        case add:
+            op = '+';
+            break;
+        case sub:
+            op = '-';
+            break;
+        case mul:
+            op = '×';
+            break;
+        case div:
+            op = '÷';
+            break;
+        default:
+            op = '';
+            break;
+    }
+
+    if (stack.length == 0){
+        history.innerText = '';
+    }
+    
+    else if (stack.length == 1){
+        history.innerText = `${stack[0]} ${op}`;
+    }
 }
 
 const displayValue = document.getElementById('curr-val');
+const history = document.getElementById('history');
 
 //buttons
 const numBtns = document.querySelectorAll('.num-btns');
@@ -60,7 +91,8 @@ opBtns.forEach(op => op.addEventListener('click', (e) => {
     else if(stack.length == 1){
         stack.push(parseFloat(value1));
         value1 = operate(stack[0], stack[1], operation);
-        value1 = value1.toString();
+        stack = [value1];
+        value1 = '0';
         updateDisplayVal(value1);
     } else {
         // stack = [stack.reduce(operation, 0)];
@@ -74,7 +106,9 @@ equalBtn.addEventListener('click', (e)=>{
     if(stack.length == 1){ 
         stack.push(parseFloat(value1));
         value1 = operate(stack[0], stack[1], operation);
-        value1 = value1.toString();
+        stack = [value1];
+        operation = null;
+        value1 = '0';
         updateDisplayVal(value1);
     }
     console.log(stack);
